@@ -73,7 +73,6 @@ To run the project : npm start
 
 ## 👥 Authors <a name="authors"></a>
 
-
 👤 **Peter MWovi**
 
 - GitHub: [@githubhandle](https://github.com/peter-mwovi/)
