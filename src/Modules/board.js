@@ -1,20 +1,16 @@
-export default function ScoreBoard(Scores) {
-  const refreshBtn = document.getElementById('refresh');
-  const board = document.querySelector('.board');
-
-  refreshBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const scor = JSON.parse(localStorage.getItem('Scores') || []);
-    let boardHtml = '';
-    if (scor) {
-      Scores = scor;
-      Scores.forEach((player) => {
+const ScoreBoard = async () => {
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:OsIdfjVZGF6rZmZWBTi6/scores/')
+    .then((res) => res.json())
+    .then((data) => {
+      const scores = data.result.sort((a, b) => a.score - b.score);
+      const board = document.querySelector('.board');
+      let boardHtml = '';
+      scores.forEach((player) => {
         boardHtml += ` <tr>
-        <td>${player.Name}: ${player.Score}</td>
-    </tr>`;
+          <td>${player.user}: ${player.score}</td>
+      </tr>`;
       });
       board.innerHTML = boardHtml;
-    }
-  });
-  localStorage.setItem('Scores', JSON.stringify(Scores));
-}
+    });
+};
+export default ScoreBoard;

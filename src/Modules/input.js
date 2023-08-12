@@ -1,20 +1,11 @@
-export default function getInput(Scores) {
-  const form = document.querySelector('.form');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.querySelector('#name').value.trim();
-    const score = document.querySelector('#score').value.trim();
-    if (name === '' || score === '' || Number.isNaN(score)) {
-      return;
-    }
-    const scores = {
-      Name: name,
-      Score: +score,
-    };
-    Scores.push(scores);
-    document.querySelector('#name').value = '';
-    document.querySelector('#score').value = '';
+const getInput = async () => {
+  const name = document.querySelector('#name').value.trim();
+  const score = document.querySelector('#score').value.trim();
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:OsIdfjVZGF6rZmZWBTi6/scores/', {
+    method: 'POST',
+    headers: { 'content-Type': 'application/json' },
 
-    localStorage.setItem('Scores', JSON.stringify(Scores));
+    body: JSON.stringify({ score: +score, user: name }),
   });
-}
+};
+export default getInput;
