@@ -54,7 +54,7 @@ In order to run this project you need: A web browser.
 
 Clone this repository to your desired folder:
 cd Module_1 
--git clone https://github.com/As1imwe-Mark/LeaderBoard
+-git clone https://github.com/peter-mwovi/LeaderBoard
 
 ### Install
 
@@ -73,10 +73,12 @@ To run the project : npm start
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Asiimwe Mark**
-- GitHub: @[As1imwe-Mark](https://github.com/As1imwe-Mark)
-- Twitter:@[markasiimwe](https://twitter.com/MarkAsiimwe?t=fPfXM4CV3OU6gKMNB1RGDA&s=09)
-- LinkedIn:@[Mark Asiimwe](https://www.linkedin.com/in/mark-asiimwe-0ab0611ab)
+
+👤 **Peter MWovi**
+
+- GitHub: [@githubhandle](https://github.com/peter-mwovi/)
+- Twitter: [@twitterhandle](https://twitter.com/mwovi_peter)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/peter-mwovi-57141a179/)
 
 ## Contributions
 
